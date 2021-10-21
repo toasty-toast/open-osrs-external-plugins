@@ -14,7 +14,6 @@ import net.runelite.client.config.ConfigManager;
 import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.ui.overlay.OverlayManager;
 import org.pf4j.Extension;
-import org.w3c.dom.css.Rect;
 
 import java.awt.*;
 
@@ -22,7 +21,7 @@ import java.awt.*;
 @Extension
 @PluginDescriptor(
         name = "Bank PIN",
-        description = "Automatically enters you bank PIN"
+        description = "Highlights the squares you need to click to enter your bank pin"
 )
 @Slf4j
 public class BankPinPlugin extends Plugin {

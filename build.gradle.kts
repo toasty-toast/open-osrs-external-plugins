@@ -13,8 +13,6 @@ project.extra["GithubUrl"] = "https://github.com/toasty-toast/open-osrs-external
 apply<BootstrapPlugin>()
 
 subprojects {
-    group = "com.example"
-
     project.extra["PluginProvider"] = "toasty-toast"
     project.extra["ProjectSupportUrl"] = ""
     project.extra["PluginLicense"] = "3-Clause BSD License"
