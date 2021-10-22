@@ -117,6 +117,8 @@ public class GroupIronPanelPlugin extends Plugin {
         GroupInformation groupInformation = new GroupInformation();
         groupInformation.setName(groupName);
         groupInformation.setMembers(groupMembers);
-        groupManager.setGroupInformation(groupInformation);
+        if (groupManager.setGroupInformation(groupInformation)) {
+            panel.refreshPanel();
+        }
     }
 }

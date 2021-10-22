@@ -39,13 +39,13 @@ public class GroupManager {
         return groupInformation;
     }
 
-    public synchronized void setGroupInformation(GroupInformation groupInformation) {
+    public synchronized boolean setGroupInformation(GroupInformation groupInformation) {
         if (groupInformation == null || groupInformation.getName() == null || groupInformation.getMembers() == null) {
-            return;
+            return false;
         }
         GroupInformation currentGroupInformation = getGroupInformation();
         if (groupInformation.getName().equals(currentGroupInformation.getName()) && areGroupMembersSame(currentGroupInformation.getMembers(), groupInformation.getMembers())) {
-            return;
+            return false;
         }
 
         GroupInformation newGroupInformation = new GroupInformation();
@@ -54,6 +54,8 @@ public class GroupManager {
         this.groupInformation = newGroupInformation;
 
         saveGroupInformation();
+
+        return true;
     }
 
     private boolean areGroupMembersSame(List<String> first, List<String> second) {
