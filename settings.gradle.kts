@@ -1,6 +1,7 @@
 rootProject.name = "external-plugins"
 
 include(":bank-pin")
+include(":group-iron-panel")
 
 for (project in rootProject.children) {
     project.apply {
