@@ -1,6 +1,6 @@
 import ProjectVersions.openosrsVersion
 
-version = "1.0.1"
+version = "1.0.2"
 
 project.extra["PluginName"] = "Group Iron Panel"
 project.extra["PluginDescription"] = "Adds a panel showing your group members' stats"

@@ -75,7 +75,6 @@ public class GroupIronPanel extends PluginPanel {
 
         List<String> groupMembers = groupInformation.getMembers();
         for (int i = 0; i < groupMembers.size() && i < GROUP_IRON_MAX_GROUP_SIZE; i++) {
-            log.info(groupMembers.get(i));
             playerStatsPanels.get(i).setPlayer(groupMembers.get(i));
             playerStatsPanels.get(i).refreshStats();
         }
