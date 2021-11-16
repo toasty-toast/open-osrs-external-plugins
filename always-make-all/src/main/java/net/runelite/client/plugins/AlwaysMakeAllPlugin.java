@@ -74,8 +74,6 @@ public class AlwaysMakeAllPlugin extends Plugin {
         // If the button for the item we want to make has action text it means we haven't clicked it yet.
         // We have to make this check because after we click it, it remains visible with the hour glass icon for a moment.
         if (makeOption.getActions() != null) {
-            log.info("Clicking");
-            log.info(String.join(", ", makeOption.getActions()));
             mouseUtils.delayMouseClick(makeOption.getBounds(), getSleepDelay());
             return;
         }
