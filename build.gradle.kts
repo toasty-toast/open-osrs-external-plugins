@@ -30,6 +30,7 @@ subprojects {
             }
             filter {
                 includeGroupByRegex("com\\.openosrs.*")
+                includeGroupByRegex("com\\.owain.*")
             }
         }
     }
