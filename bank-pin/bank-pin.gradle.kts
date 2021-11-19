@@ -1,9 +1,9 @@
 import ProjectVersions.openosrsVersion
 
-version = "1.0.1"
+version = "1.1.0"
 
 project.extra["PluginName"] = "Bank PIN"
-project.extra["PluginDescription"] = "Highlights the squares you need to click to enter your bank pin"
+project.extra["PluginDescription"] = "Bank PIN utilities"
 
 dependencies {
     annotationProcessor(Libraries.lombok)

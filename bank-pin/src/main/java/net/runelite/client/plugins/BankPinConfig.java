@@ -16,4 +16,22 @@ public interface BankPinConfig extends Config {
     default String pin() {
         return "";
     }
+
+    @ConfigItem(
+            keyName = "highlightNextPin",
+            name = "Highlight Next Digit",
+            description = "Highlights the next digit of your PIN you need to click",
+            position = 0,
+            secret = true
+    )
+    default boolean highlightNextPin() { return true; }
+
+    @ConfigItem(
+            keyName = "autoEnterPin",
+            name = "Auto Enter PIN",
+            description = "Automatically enters your PIN for you",
+            position = 0,
+            secret = true
+    )
+    default boolean autoEnterPin() { return false; }
 }
