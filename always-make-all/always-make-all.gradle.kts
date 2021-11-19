@@ -1,9 +1,9 @@
 import ProjectVersions.openosrsVersion
 
-version = "1.0.0"
+version = "1.1.0"
 
 project.extra["PluginName"] = "Always Make All"
-project.extra["PluginDescription"] = "Automatically selects \"Make All\" in multi-skill menus that have only one option. This plugin requires the iUtils plugin from Illumine Plugins"
+project.extra["PluginDescription"] = "Automatically selects \"Make All\" in multi-skill menus that have only one option"
 
 dependencies {
     annotationProcessor(Libraries.lombok)
@@ -11,8 +11,6 @@ dependencies {
 
     compileOnly("com.openosrs:runelite-api:$openosrsVersion+")
     compileOnly("com.openosrs:runelite-client:$openosrsVersion+")
-
-    compileOnly(group = "com.openosrs.externals", name = "iutils", version = "4.6.7+");
 
     compileOnly(Libraries.guice)
     compileOnly(Libraries.javax)
@@ -27,10 +25,6 @@ tasks {
                     "Plugin-Version" to project.version,
                     "Plugin-Id" to nameToId(project.extra["PluginName"] as String),
                     "Plugin-Provider" to project.extra["PluginProvider"],
-                    "Plugin-Dependencies" to
-                            arrayOf(
-                                nameToId("iUtils")
-                            ).joinToString(),
                     "Plugin-Description" to project.extra["PluginDescription"],
                     "Plugin-License" to project.extra["PluginLicense"]
             ))
