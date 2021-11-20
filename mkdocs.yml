@@ -1,4 +1,5 @@
 site_name: OpenOSRS Toast Plugins
+site_url: https://toasty-toast.github.io/open-osrs-external-plugins
 theme:
   name: material
 extra_css:
