@@ -1,0 +1,5 @@
+site_name: OpenOSRS Toast Plugins
+theme:
+  name: material
+extra_css:
+  - stylesheets/styles.css
