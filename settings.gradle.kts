@@ -4,6 +4,7 @@ include(":always-make-all")
 include(":bank-pin")
 include(":group-iron-panel")
 include(":herbologist")
+include(":karambwan-fisher")
 
 for (project in rootProject.children) {
     project.apply {
