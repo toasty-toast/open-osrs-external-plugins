@@ -3,6 +3,7 @@ rootProject.name = "external-plugins"
 include(":always-make-all")
 include(":bank-pin")
 include(":group-iron-panel")
+include(":herbologist")
 
 for (project in rootProject.children) {
     project.apply {
