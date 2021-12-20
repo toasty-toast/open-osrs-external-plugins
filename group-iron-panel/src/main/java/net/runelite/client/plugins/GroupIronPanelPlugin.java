@@ -11,7 +11,7 @@ import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.ui.ClientToolbar;
 import net.runelite.client.ui.NavigationButton;
 import net.runelite.client.util.ImageUtil;
-import net.runelite.http.api.hiscore.HiscoreClient;
+import net.runelite.client.hiscore.HiscoreClient;
 import okhttp3.OkHttpClient;
 import org.pf4j.Extension;
 

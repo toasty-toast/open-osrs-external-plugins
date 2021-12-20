@@ -1,6 +1,6 @@
 import ProjectVersions.openosrsVersion
 
-version = "1.1.0"
+version = "1.1.1"
 
 project.extra["PluginName"] = "Bank PIN"
 project.extra["PluginDescription"] = "Bank PIN utilities"

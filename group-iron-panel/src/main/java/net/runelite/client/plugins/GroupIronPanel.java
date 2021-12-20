@@ -4,7 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import net.runelite.client.ui.ColorScheme;
 import net.runelite.client.ui.PluginPanel;
 import net.runelite.client.util.ImageUtil;
-import net.runelite.http.api.hiscore.HiscoreClient;
+import net.runelite.client.hiscore.HiscoreClient;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;

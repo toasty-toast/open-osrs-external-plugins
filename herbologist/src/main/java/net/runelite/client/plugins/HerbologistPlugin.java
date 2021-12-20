@@ -184,7 +184,7 @@ public class HerbologistPlugin extends Plugin {
         List<WidgetItem> herbWidgets = inventoryUtils.getItems(grimyHerbIds);
         long sleep = 0;
         for (WidgetItem herbWidget : herbWidgets) {
-            MenuEntry menuEntry = new MenuEntry("", "", herbWidget.getId(), MenuAction.ITEM_FIRST_OPTION.getId(), herbWidget.getIndex(), WidgetInfo.INVENTORY.getId(), true);
+            LegacyMenuEntry menuEntry = new LegacyMenuEntry("", "", herbWidget.getId(), MenuAction.ITEM_FIRST_OPTION.getId(), herbWidget.getIndex(), WidgetInfo.INVENTORY.getId(), true);
             sleep += calculateSleepDelay();
             iUtils.doActionMsTime(menuEntry, herbWidget.getCanvasBounds().getBounds(), sleep);
         }

@@ -1,6 +1,6 @@
 import ProjectVersions.openosrsVersion
 
-version = "1.1.0"
+version = "1.1.1"
 
 project.extra["PluginName"] = "Always Make All"
 project.extra["PluginDescription"] = "Automatically selects \"Make All\" in multi-skill menus that have only one option"
