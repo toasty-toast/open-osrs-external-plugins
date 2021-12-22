@@ -1,6 +1,6 @@
 import ProjectVersions.openosrsVersion
 
-version = "1.0.0"
+version = "1.0.1"
 
 project.extra["PluginName"] = "Karambwan Fisher"
 project.extra["PluginDescription"] = "Fishes Karambwan and banks them in Zanaris"

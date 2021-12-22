@@ -111,7 +111,6 @@ public class HerbologistPlugin extends Plugin {
         }
 
         HerbologistState state = getState();
-        log.info("State: " + state + ", Tick delay: " + ticksToWait);
 
         if (ticksToWait > 0) {
             ticksToWait--;

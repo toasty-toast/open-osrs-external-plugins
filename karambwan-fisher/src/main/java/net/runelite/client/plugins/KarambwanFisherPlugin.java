@@ -104,7 +104,6 @@ public class KarambwanFisherPlugin extends Plugin {
         }
 
         KarambwanFisherState state = getState();
-        log.info("State: " + state + ", Tick delay: " + ticksToWait);
 
         if (ticksToWait > 0) {
             ticksToWait--;
