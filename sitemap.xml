@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://toasty-toast.github.io/open-osrs-external-plugins/</loc>
+         <lastmod>2022-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://toasty-toast.github.io/open-osrs-external-plugins/plugins/always-make-all/</loc>
+         <lastmod>2022-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://toasty-toast.github.io/open-osrs-external-plugins/plugins/bank-pin/</loc>
+         <lastmod>2022-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://toasty-toast.github.io/open-osrs-external-plugins/plugins/group-iron-panel/</loc>
+         <lastmod>2022-02-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+</urlset>
