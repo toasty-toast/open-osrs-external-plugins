@@ -8,7 +8,8 @@ public interface HerbologistConfig extends Config {
             keyName = "delayConfig",
             name = "Sleep Delay Configuration",
             description = "Configure how the plugin handles sleep delays",
-            position = 2
+            position = 1,
+            closedByDefault = true
     )
     String delayConfig = "delayConfig";
 
@@ -17,7 +18,6 @@ public interface HerbologistConfig extends Config {
             keyName = "sleepMin",
             name = "Sleep Min",
             description = "",
-            position = 3,
             section = "delayConfig"
     )
     default int sleepMin() {
@@ -29,7 +29,6 @@ public interface HerbologistConfig extends Config {
             keyName = "sleepMax",
             name = "Sleep Max",
             description = "",
-            position = 4,
             section = "delayConfig"
     )
     default int sleepMax() {
@@ -41,7 +40,6 @@ public interface HerbologistConfig extends Config {
             keyName = "sleepTarget",
             name = "Sleep Target",
             description = "",
-            position = 5,
             section = "delayConfig"
     )
     default int sleepTarget() {
@@ -53,7 +51,6 @@ public interface HerbologistConfig extends Config {
             keyName = "sleepDeviation",
             name = "Sleep Deviation",
             description = "",
-            position = 6,
             section = "delayConfig"
     )
     default int sleepDeviation() {
@@ -64,7 +61,6 @@ public interface HerbologistConfig extends Config {
             keyName = "sleepWeightedDistribution",
             name = "Sleep Weighted Distribution",
             description = "Shifts the random distribution towards the lower end at the target, otherwise it will be an even distribution",
-            position = 7,
             section = "delayConfig"
     )
     default boolean sleepWeightedDistribution() {
@@ -75,7 +71,8 @@ public interface HerbologistConfig extends Config {
             keyName = "delayTickConfig",
             name = "Game Tick Configuration",
             description = "Configure how the bot handles game tick delays, 1 game tick equates to roughly 600ms",
-            position = 8
+            position = 2,
+            closedByDefault = true
     )
     String delayTickConfig = "delayTickConfig";
 
@@ -84,7 +81,6 @@ public interface HerbologistConfig extends Config {
             keyName = "tickDelayMin",
             name = "Game Tick Min",
             description = "",
-            position = 9,
             section = "delayTickConfig"
     )
     default int tickDelayMin() {
@@ -96,7 +92,6 @@ public interface HerbologistConfig extends Config {
             keyName = "tickDelayMax",
             name = "Game Tick Max",
             description = "",
-            position = 10,
             section = "delayTickConfig"
     )
     default int tickDelayMax() {
@@ -108,7 +103,6 @@ public interface HerbologistConfig extends Config {
             keyName = "tickDelayTarget",
             name = "Game Tick Target",
             description = "",
-            position = 11,
             section = "delayTickConfig"
     )
     default int tickDelayTarget() {
@@ -120,7 +114,6 @@ public interface HerbologistConfig extends Config {
             keyName = "tickDelayDeviation",
             name = "Game Tick Deviation",
             description = "",
-            position = 12,
             section = "delayTickConfig"
     )
     default int tickDelayDeviation() {
@@ -131,18 +124,64 @@ public interface HerbologistConfig extends Config {
             keyName = "tickDelayWeightedDistribution",
             name = "Game Tick Weighted Distribution",
             description = "Shifts the random distribution towards the lower end at the target, otherwise it will be an even distribution",
-            position = 13,
             section = "delayTickConfig"
     )
     default boolean tickDelayWeightedDistribution() {
         return false;
     }
 
+    @ConfigSection(
+            keyName = "activityConfig",
+            name = "Activity Configuration",
+            description = "Configure the activity for the bot to perform",
+            position = 3
+    )
+    String activityConfig = "activityConfig";
+
+    @ConfigItem(
+            keyName = "activity",
+            name = "Activity",
+            description = "The activity for the bot to perform",
+            section = "activityConfig",
+            position = 1
+    )
+    default HerbologistActivity activity() {
+        return HerbologistActivity.CLEAN_HERBS;
+    }
+
+    @ConfigItem(
+            keyName = "potion",
+            name = "Potion",
+            description = "The potion the bot should make",
+            section = "activityConfig",
+            hidden = true,
+            unhide = "activity",
+            unhideValue = "MAKE_POTIONS",
+            position = 2
+    )
+    default HerbologistPotion potion() {
+        return HerbologistPotion.SUPER_ENERGY;
+    }
+
+    @ConfigItem(
+            keyName = "makeUnfinishedPotions",
+            name = "Make Unfinished Potions",
+            description = "Have the bot make the unfinished potions, then the finished ones",
+            section = "activityConfig",
+            hidden = true,
+            unhide = "activity",
+            unhideValue = "MAKE_POTIONS",
+            position = 3
+    )
+    default boolean makeUnfinishedPotions() {
+        return true;
+    }
+
     @ConfigItem(
             keyName = "startButton",
             name = "Start/Stop",
             description = "Starts or stops the plugin",
-            position = 200
+            position = 4
     )
     default Button startButton() {
         return new Button();

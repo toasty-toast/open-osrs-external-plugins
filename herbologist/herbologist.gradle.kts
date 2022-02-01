@@ -1,6 +1,6 @@
 import ProjectVersions.openosrsVersion
 
-version = "1.0.2"
+version = "1.1.0"
 
 project.extra["PluginName"] = "Herbologist"
 project.extra["PluginDescription"] = "Does Herblore stuff"
